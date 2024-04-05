@@ -3,6 +3,11 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\FacultyController;
+use App\Http\Controllers\MarkController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -23,9 +28,19 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// Authentication routes
+Auth::routes(['register' => false]);
 
-Auth::routes();
+    // Department routes
+Route::resource('departments', DepartmentController::class)->except(['create', 'show']);
+Route::get('/departments/create', [DepartmentController::class, 'create'])->name('departments.create');
+Route::get('/departments/{department}', [DepartmentController::class, 'show'])->name('departments.show');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::resource('product', App\Http\Controllers\ProductController::class);
+    // Faculty routes
+Route::get('/faculty', [FacultyController::class, 'index'])->name('faculty.index');
+Route::get('/faculty/create', [FacultyController::class, 'create'])->name('faculty.create');
+Route::post('/faculty', [FacultyController::class, 'store'])->name('faculty.store');
+Route::get('/faculty/{faculty}', [FacultyController::class, 'show'])->name('faculty.show');
+Route::get('/faculty/{faculty}/edit', [FacultyController::class, 'edit'])->name('faculty.edit');
+Route::put('/faculty/{faculty}', [FacultyController::class, 'update'])->name('faculty.update');
+Route::delete('/faculty/{faculty}', [FacultyController::class, 'destroy'])->name('faculty.destroy');
