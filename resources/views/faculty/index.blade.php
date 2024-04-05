@@ -26,9 +26,9 @@
                         <td>{{ $member->phone }}</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a href="{{ route('faculty.show', $member->id) }}" class="btn btn-sm btn-info" style="margin-left: 5px;">View</a> <!-- Add left margin -->
-                                <a href="{{ route('faculty.edit', $member->id) }}" class="btn btn-sm btn-primary" style="margin-left: 5px;">Edit</a> <!-- Add left margin -->
-                                <form action="{{ route('faculty.destroy', $member->id) }}" method="POST" style="margin-left: 5px;"> <!-- Add left margin -->
+                                <a href="{{ route('faculty.show', $member->id) }}" class="btn btn-sm btn-info" style="margin-left: 5px;">View</a> 
+                                <a href="{{ route('faculty.edit', $member->id) }}" class="btn btn-sm btn-primary" style="margin-left: 5px;">Edit</a>
+                                <form action="{{ route('faculty.destroy', $member->id) }}" method="POST" style="margin-left: 5px;"> 
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger" style="color: red;" onclick="return confirm('Are you sure you want to delete this faculty member?')">Delete</button>

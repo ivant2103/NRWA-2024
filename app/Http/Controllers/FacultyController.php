@@ -13,7 +13,7 @@ class FacultyController extends Controller
     public function create()
     {
         
-    $departments = Department::all(); // Fetch all departments
+    $departments = Department::all(); 
     return view('faculty.create', compact('departments'));
     }
 
@@ -23,7 +23,7 @@ class FacultyController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'department_id' => 'required|exists:departments,id',
-            'phone' => 'required|string|max:10', // Maximum length of 10 characters
+            'phone' => 'required|string|max:10', 
         ]);
 
         if ($validator->fails()) {

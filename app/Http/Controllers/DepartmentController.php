@@ -11,7 +11,7 @@ class DepartmentController extends Controller
     // Create
     public function create()
 {
-    $faculty = Faculty::all(); // Assuming Faculty is the model for your faculty members
+    $faculty = Faculty::all(); 
     return view('departments.create', compact('faculty'));
 }
 
@@ -49,7 +49,7 @@ public function show(Department $department)
 public function edit(Department $department)
 {
     
-    $faculties = Faculty::all(); // Fetch all faculties
+    $faculties = Faculty::all(); 
     return view('departments.edit', compact('department', 'faculties'));
 }
 

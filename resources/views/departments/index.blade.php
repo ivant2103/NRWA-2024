@@ -22,9 +22,9 @@
                                     <tr>
                                         <td>{{ $department->id }}</td>
                                         <td>{{ $department->name }}</td>
-                                        <td>{{ $department->hod_id }}</td> <!-- Display HOD ID -->
+                                        <td>{{ $department->hod_id }}</td> 
                                         <td>
-                                            <a href="{{ route('departments.show', $department->id) }}" class="btn btn-sm btn-info">View</a> <!-- Add View button -->
+                                            <a href="{{ route('departments.show', $department->id) }}" class="btn btn-sm btn-info">View</a> 
                                             <a href="{{ route('departments.edit', $department->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                             <form action="{{ route('departments.destroy', $department->id) }}" method="POST" style="display: inline-block;">
                                                 @csrf
