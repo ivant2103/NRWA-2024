@@ -10,8 +10,6 @@ class Faculty extends Model
 {
     use HasFactory;
 
-    protected $table = 'faculty';
-    public $timestamps = false;
     protected $fillable = [
         'first_name',
         'last_name',
@@ -19,6 +17,10 @@ class Faculty extends Model
         'phone',
     ];
 
+    protected $table = 'faculty';
+    
+    public $timestamps = false;
+    
     public function department()
     {
         return $this->belongsTo(Department::class, 'department_id');

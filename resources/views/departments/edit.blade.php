@@ -43,7 +43,9 @@
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Update') }}
+                            
                             </button>
+                        <a href="{{ route('departments.index') }}" class="btn btn-primary">Back</a>
                         </div>
                     </form>
                 </div>

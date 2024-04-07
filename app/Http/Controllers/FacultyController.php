@@ -20,8 +20,8 @@ class FacultyController extends Controller
     public function store(Request $request)
     {
         $validator = \Validator::make($request->all(), [
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'first_name' => 'requiredstring|max:25',
+            'last_name' => 'requiredstring|max:25',
             'department_id' => 'required|exists:departments,id',
             'phone' => 'required|string|max:10', 
         ]);

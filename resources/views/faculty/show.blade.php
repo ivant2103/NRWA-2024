@@ -9,6 +9,7 @@
                 <p><strong>Name:</strong> {{ $faculty->first_name }} {{ $faculty->last_name }}</p>
                 <p><strong>Department:</strong> {{ $faculty->department_id }}</p>
                 <p><strong>Phone:</strong> {{ $faculty->phone }}</p>
+                <a href="{{ route('faculty.index') }}" class="btn btn-primary">Back</a>
                 
             </div>
         </div>

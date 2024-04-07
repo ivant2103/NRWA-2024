@@ -39,6 +39,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary">Update</button>
+                            <a href="{{ route('faculty.index') }}" class="btn btn-primary">Back</a>
                         </form>
                     </div>
                 </div>

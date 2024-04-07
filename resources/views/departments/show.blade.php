@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <p><strong>Name:</strong> {{ $department->name }}</p>
                     <p><strong>Head of Department:</strong> {{ $department->hod->first_name }} {{ $department->hod->last_name }}</p>
+                    <a href="{{ route('departments.index') }}" class="btn btn-primary">Back</a>
                 </div>
             </div>
         </div>

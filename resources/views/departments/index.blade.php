@@ -29,7 +29,7 @@
                                             <form action="{{ route('departments.destroy', $department->id) }}" method="POST" style="display: inline-block;">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger"  style="color: red;">Delete</button>
+                                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -38,6 +38,7 @@
                         </table>
                     </div>
                 </div>
+                <a href="{{ route('departments.create') }}" class="btn btn-primary mt-3">Add Department</a>
             </div>
         </div>
     </div>
