@@ -45,7 +45,8 @@
                             </tbody>
                         </table>    
                     </div>
-                <a href="{{ route('students.create') }}" class="btn btn-primary mt-3" style="margin-top:10px;">Create New Student</a>
+                
         </div>
+        <a href="{{ route('students.create') }}" class="btn btn-primary mt-3" style="margin-top:10px;">Create New Student</a>
     </div>
 @endsection
